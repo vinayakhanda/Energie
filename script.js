@@ -68,7 +68,7 @@ function Calculate(){
     var blbNo = document.getElementById("blb").value;
     var blbHour = document.getElementById("blbHour").value;
     var blbPower = 10;
-    var blbMaxPower = 400;
+    var blbMaxPower = 950;
     var totalblbHour = blbNo * blbPower;
     var blbday = totalblbHour * blbHour;
     var blbMonth = blbday * 30;
@@ -77,7 +77,7 @@ function Calculate(){
     var fansNo = document.getElementById("fans").value;
     var fansHour = document.getElementById("fansHour").value;
     var fansPower = 35;
-    var fansMaxPower = 900;
+    var fansMaxPower = 5000;
     var totalfansHour = fansNo * fansPower;
     var fansday = totalfansHour * fansHour;
     var fansMonth = fansday * 30;
@@ -86,7 +86,7 @@ function Calculate(){
     var icNo = document.getElementById("ic").value;
     var icHour = document.getElementById("icHour").value;
     var icPower = 1900;
-    var icMaxPower = 400;
+    var icMaxPower = 6000;
     var totalicHour = icNo * icPower;
     var icday = totalicHour * icHour;
     var icMonth = icday * 30;
@@ -95,7 +95,7 @@ function Calculate(){
     var tubeNo = document.getElementById("tube").value;
     var tubeHour = document.getElementById("tubeHour").value;
     var tubePower = 15;
-    var tubeMaxPower = 300;
+    var tubeMaxPower = 1000;
     var totaltubeHour = tubeNo * tubePower;
     var tubeday = totaltubeHour * tubeHour;
     var tubeMonth = tubeday * 30;
@@ -157,7 +157,7 @@ function Calculate(){
 
     document.getElementById("microday").innerHTML = microday/1000;
     document.getElementById("microMonth").innerHTML = (microday/1000)*30;
-    document.getElementById("micrimnSpnt").innerHTML = (microday/1000)*30*elRate;
+    document.getElementById("micromnSpnt").innerHTML = (microday/1000)*30*elRate;
 
     totalUsage += (microday/1000)*30;
 
