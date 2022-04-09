@@ -106,6 +106,8 @@ function Calculate(){
 
     document.getElementById("acday").innerHTML = acday/1000;
     document.getElementById("acMonth").innerHTML = (acday/1000)*30;
+    document.getElementById("acmnSpnt").innerHTML = (acday/1000)*30*elRate;
+
     totalUsage += (acday/1000)*30;
 
     if (acday > acMaxPower) {
@@ -114,6 +116,8 @@ function Calculate(){
 
     document.getElementById("tvday").innerHTML = tvday/1000;
     document.getElementById("tvMonth").innerHTML = (tvday/1000)*30;
+    document.getElementById("tvmnSpnt").innerHTML = (tvday/1000)*30*elRate;
+
     totalUsage += (tvday/1000)*30;
 
     if (tvday > tvMaxPower) {
@@ -122,6 +126,8 @@ function Calculate(){
 
     document.getElementById("fridgeday").innerHTML = fridgeday/1000;
     document.getElementById("fridgeMonth").innerHTML = (fridgeday/1000)*30;
+    document.getElementById("fridgemnSpnt").innerHTML = (fridgeday/1000)*30*elRate;
+
     totalUsage += (fridgeday/1000)*30;
 
     if (fridgeday > fridgeMaxPower) {
@@ -130,6 +136,8 @@ function Calculate(){
 
     document.getElementById("wmday").innerHTML = wmday/1000;
     document.getElementById("wmMonth").innerHTML = (wmday/1000)*30;
+    document.getElementById("wmmnSpnt").innerHTML = (wmday/1000)*30*elRate;
+
     totalUsage += (wmday/1000)*30;
 
     if (wmday > wmMaxPower) {
@@ -138,6 +146,8 @@ function Calculate(){
 
     document.getElementById("geyserday").innerHTML = geyserday/1000;
     document.getElementById("geyserMonth").innerHTML = (geyserday/1000)*30;
+    document.getElementById("geysermnSpnt").innerHTML = (geyserday/1000)*30*elRate;
+
     totalUsage += (geyserday/1000)*30;
 
 
@@ -147,6 +157,8 @@ function Calculate(){
 
     document.getElementById("microday").innerHTML = microday/1000;
     document.getElementById("microMonth").innerHTML = (microday/1000)*30;
+    document.getElementById("micrimnSpnt").innerHTML = (microday/1000)*30*elRate;
+
     totalUsage += (microday/1000)*30;
 
     if (microday > microMaxPower) {
@@ -155,6 +167,8 @@ function Calculate(){
 
     document.getElementById("compday").innerHTML = compday/1000;
     document.getElementById("compMonth").innerHTML = (compday/1000)*30;
+    document.getElementById("compmnSpnt").innerHTML = (compday/1000)*30*elRate;
+
     totalUsage += (compday/1000)*30;
 
     if (compday > compMaxPower) {
@@ -163,6 +177,8 @@ function Calculate(){
     
     document.getElementById("blbday").innerHTML = blbday/1000;
     document.getElementById("blbMonth").innerHTML = (blbday/1000)*30;
+    document.getElementById("blbmnSpnt").innerHTML = (blbday/1000)*30*elRate;
+
     totalUsage += (blbday/1000)*30;
 
     if (blbday > blbMaxPower) {
@@ -171,6 +187,8 @@ function Calculate(){
 
     document.getElementById("fanday").innerHTML = fansday/1000;
     document.getElementById("fanMonth").innerHTML = (fansday/1000)*30;
+    document.getElementById("fanmnSpnt").innerHTML = (fansday/1000)*30*elRate;
+
     totalUsage += (fansday/1000)*30;
 
 
@@ -180,6 +198,8 @@ function Calculate(){
 
     document.getElementById("icday").innerHTML = icday/1000;
     document.getElementById("icMonth").innerHTML = (icday/1000)*30;
+    document.getElementById("icmnSpnt").innerHTML = (icday/1000)*30*elRate;
+
     totalUsage += (icday/1000)*30;
 
 
@@ -189,6 +209,8 @@ function Calculate(){
 
     document.getElementById("tubeday").innerHTML = tubeday/1000;
     document.getElementById("tubeMonth").innerHTML = (tubeday/1000)*30;
+    document.getElementById("tubemnSpnt").innerHTML = (tubeday/1000)*30*elRate;
+
     totalUsage += (tubeday/1000)*30;
 
 
@@ -200,15 +222,15 @@ function Calculate(){
     document.getElementById("sgst").innerHTML = suggestions.join("<br>")
 
     //Now begins the code for calculating total expenses and usage.... 
-    document.getElementById("ttlpwr").innerHTML = "total electricity usage (in kilowatt) : " + totalUsage;
+    document.getElementById("ttlpwr").innerHTML = "Total electricity usage (in kilowatt) : " + totalUsage;
     document.getElementById("emCost").innerHTML = "Estimated bill amount : " + totalUsage * elRate;
     document.getElementById("sgst").innerHTML = suggestions.join("<br>")
     
     if (elRate == 0) {
-        alert("Plz enter the Price of electricity")
+        alert("Please enter the Price of electricity")
     }
 
 
-}
-console.log("Made by Vinayak Handa (github.com/vinayakhanda)")
-//Made by Vinayak Handa (github.com/vinayakhanda)
+    }
+// console.log("Made by Vinayak Handa (github.com/vinayakhanda)")
+// //Made by Vinayak Handa (github.com/vinayakhanda)
