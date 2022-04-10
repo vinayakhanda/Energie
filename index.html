@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electro</title>
-    <script src="script.js"></script>
+    <title>Energie</title>
+
+    <!-- <script src="showChart.js"></script> -->
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script src="Chart.js"></script>
 </head>
 <body>
     <h1>Energie</h1>
@@ -15,18 +18,7 @@
     <input type="number" name="" id="elRate">
     <br>
     <br>
-    <!-- <div id="disc">
-        
-        <div class="txt" >
-            <h1 style="color: aliceblue;">Disclaimer</h1>
-            <li> I (the develpor of this programme) DO NOT provide any accuracy of the results shown by this software.</li>
-            <li>This software is meant for an ESTIMATE of the total usage of electricity by the user and the ESTIMATED Bill cost.</li>
-            <li>The total usage of an appliance is based on the AVERAGE of all the models of all the appliances and the electricity consumption may varry for model to model and company to company</li>
-            <li>If the result bill amount is different from the actuall bill whcih you get......I am not responsible</li>
-            <li> But if its near to the actuall amount....your welcome</li>
-            <button onclick= document.location.reload()>Close</button>
-        </div>
-    </div> -->
+
     <table cellpadding="5px" class="rwd-table">
         <tr>
             <th>Name of appliance</th>
@@ -133,23 +125,20 @@
         <option value="No"></option>
     </datalist> 
     <br>
-<button onclick="Calculate()">Calculate</button>
+<div class="but"><button onclick="Calculate()" id="btn">Calculate</button></div> <div id="scr"> Scroll down for more results</div>
 <br>
 <br>
+<div class="suggstandrslt">
 <p id="ttlpwr"></p>
 <p id="emCost"></p>
 <p id="sgst"></p>
-<p style="font-size: 8px;" onclick="show()">Show Disclaimer
-</p>
-<script>
-    function show(){
-        document.getElementById("disc").style.display = "block";
-    }
-    // function close(){
-        
-    // }
-   
-</script>
-<!-- Made by Vinayak Handa (github.com/vinayakhanda) -->
+</div>
+
+
+<div class="chart">
+    <canvas id="chart" style="width: 50; height: 50px;"></canvas>
+</div>
+
+
 </body>
 </html>

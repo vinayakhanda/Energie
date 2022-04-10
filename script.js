@@ -1,4 +1,4 @@
-var suggestions = [""];
+var suggestions = [];
 
 function Calculate(){
         //appliance[ac]
@@ -8,7 +8,7 @@ function Calculate(){
     var acMaxPower = 23000;
     var totalAcHour = acNo * acPower;
     var acday = totalAcHour * acHour;
-    var acMonth = acday * 30;
+    var acMonth = acday * 30/1000;
 
     //appliance[Tv]
     var tvNo = document.getElementById("tv").value;
@@ -17,7 +17,7 @@ function Calculate(){
     var tvMaxPower = 350;
     var totaltvHour = tvNo * tvPower;
     var tvday = totaltvHour * tvHour;
-    var tvMonth = tvday * 30;
+    var tvMonth = tvday * 30/1000;
 
     //appliance[fridge]
     var fridgeNo = document.getElementById("fridge").value;
@@ -26,7 +26,7 @@ function Calculate(){
     var fridgeMaxPower = 6000;
     var totalfridgeHour = fridgeNo * fridgePower;
     var fridgeday = totalfridgeHour * fridgeHour;
-    var fridgeMonth = fridgeday * 30;
+    var fridgeMonth = fridgeday * 30/1000;
 
     //appliance[WashingMachine]
     var wmNo = document.getElementById("wm").value;
@@ -35,7 +35,7 @@ function Calculate(){
     var wmMaxPower = 600;
     var totalwmHour = wmNo * wmPower;
     var wmday = totalwmHour * wmHour;
-    var wmMonth = wmday * 30;
+    var wmMonth = wmday * 30/1000;
 
     //appliance[geyser]
     var geyserNo = document.getElementById("geyser").value;
@@ -44,7 +44,7 @@ function Calculate(){
     var geyserMaxPower = 6000;
     var totalgeyserHour = geyserNo * geyserPower;
     var geyserday = totalgeyserHour * geyserHour;
-    var geyserMonth = geyserday * 30;
+    var geyserMonth = geyserday * 30/1000;
 
     //appliance[microwave]
     var microNo = document.getElementById("micro").value;
@@ -53,7 +53,7 @@ function Calculate(){
     var microMaxPower = 5000;
     var totalmicroHour = microNo * microPower;
     var microday = totalmicroHour * microHour;
-    var microMonth = microday * 30;
+    var microMonth = microday * 30/1000;
 
     //appliance[comp]
     var compNo = document.getElementById("comp").value;
@@ -62,7 +62,7 @@ function Calculate(){
     var compMaxPower = 6000;
     var totalcompHour = compNo * compPower;
     var compday = totalcompHour * compHour;
-    var compMonth = compday * 30;
+    var compMonth = compday * 30/1000;
 
     //appliance[bulb]
     var blbNo = document.getElementById("blb").value;
@@ -71,7 +71,7 @@ function Calculate(){
     var blbMaxPower = 950;
     var totalblbHour = blbNo * blbPower;
     var blbday = totalblbHour * blbHour;
-    var blbMonth = blbday * 30;
+    var blbMonth = blbday * 30/1000;
 
     //appliance[fans]
     var fansNo = document.getElementById("fans").value;
@@ -80,7 +80,7 @@ function Calculate(){
     var fansMaxPower = 5000;
     var totalfansHour = fansNo * fansPower;
     var fansday = totalfansHour * fansHour;
-    var fansMonth = fansday * 30;
+    var fansMonth = fansday * 30/1000;
 
     //appliance[Induction cooker]
     var icNo = document.getElementById("ic").value;
@@ -89,7 +89,7 @@ function Calculate(){
     var icMaxPower = 6000;
     var totalicHour = icNo * icPower;
     var icday = totalicHour * icHour;
-    var icMonth = icday * 30;
+    var icMonth = icday * 30/1000;
 
     //appliance[tubeLight]
     var tubeNo = document.getElementById("tube").value;
@@ -98,7 +98,7 @@ function Calculate(){
     var tubeMaxPower = 1000;
     var totaltubeHour = tubeNo * tubePower;
     var tubeday = totaltubeHour * tubeHour;
-    var tubeMonth = tubeday * 30;
+    var tubeMonth = tubeday * 30/1000;
 
 
     var elRate = document.getElementById("elRate").value;
@@ -218,19 +218,48 @@ function Calculate(){
         suggestions.push("Turn off the tubelights when not in use or use the Tubes which are more power efficient ")
     };
 
+    
 
-    document.getElementById("sgst").innerHTML = suggestions.join("<br>")
+
+
+    if (suggestions.length == 0) {
+        document.getElementById("sgst").innerHTML = "You dont need any suggestions, you are using electricity wisely! ⚡"
+    } else {
+        document.getElementById("sgst").innerHTML = suggestions.join("<br>");
+    }
 
     //Now begins the code for calculating total expenses and usage.... 
     document.getElementById("ttlpwr").innerHTML = "Total electricity usage (in kilowatt) : " + totalUsage;
     document.getElementById("emCost").innerHTML = "Estimated bill amount : " + totalUsage * elRate;
-    document.getElementById("sgst").innerHTML = suggestions.join("<br>")
+    // document.getElementById("sgst").innerHTML = suggestions.join("<br>")
     
     if (elRate == 0) {
         alert("Please enter the Price of electricity")
     }
-
+    
+        // var appliances = ["1","2","3"]
+        var appliances2 = ["A/c","tv","fridge","Washing-Machine","Geyser","Microwave","Computer","Bulb","fans","Induction-Cooker","Tubelight"];
+        var values = [acMonth,tvMonth,fridgeMonth,wmMonth,geyserMonth,microMonth,compMonth,blbMonth,fansMonth,icMonth,tubeMonth];
+        var color = ["#f0f01a","#0000ff","#25D086","#ff0000","#ffffff","#00ffff","#8080ff","#408080","#ff0080","#804040","#008040"]
+        new Chart("chart", {
+            type: "pie",
+            data: {
+              labels: appliances2,
+              datasets: [{
+                backgroundColor: color,
+                data: values
+              }]
+            },
+            options: {
+              title: {
+                display: true,
+                text: "Graphical representation of your Electricity usage per appliance"
+              }
+            }
+          });
+         document.getElementById("scr").style.display = "block";
 
     }
 // console.log("Made by Vinayak Handa (github.com/vinayakhanda)")
 // //Made by Vinayak Handa (github.com/vinayakhanda)
+
