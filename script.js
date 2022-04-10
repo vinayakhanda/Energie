@@ -225,7 +225,7 @@ function Calculate(){
     if (suggestions.length == 0) {
         document.getElementById("sgst").innerHTML = "You dont need any suggestions, you are using electricity wisely! ⚡"
     } else {
-        document.getElementById("sgst").innerHTML = suggestions.join("<br>");
+        document.getElementById("sgst").innerHTML = suggestions.join("<br>") + "</p> Rest is well </p>";
     }
 
     //Now begins the code for calculating total expenses and usage.... 
