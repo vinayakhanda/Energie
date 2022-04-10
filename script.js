@@ -1,6 +1,6 @@
-var suggestions = [];
-
 function Calculate(){
+    var suggestions = [];
+
         //appliance[ac]
     var acNo = document.getElementById("ac").value;
     var acHour = document.getElementById("acHour").value;
@@ -111,7 +111,7 @@ function Calculate(){
     totalUsage += (acday/1000)*30;
 
     if (acday > acMaxPower) {
-        suggestions.push("You should Decrease the Usage A/c or you should buy an Ac with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of A/c or you should buy an Ac with more efficient power usage ")
     };
 
     document.getElementById("tvday").innerHTML = tvday/1000;
@@ -121,7 +121,7 @@ function Calculate(){
     totalUsage += (tvday/1000)*30;
 
     if (tvday > tvMaxPower) {
-        suggestions.push("You should Decrease the Usage TV or you should buy a Tv with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of TV or you should buy a Tv with more efficient power usage ")
     };
 
     document.getElementById("fridgeday").innerHTML = fridgeday/1000;
@@ -131,7 +131,7 @@ function Calculate(){
     totalUsage += (fridgeday/1000)*30;
 
     if (fridgeday > fridgeMaxPower) {
-        suggestions.push("You should Decrease the Usage fridge or you should buy a fridge with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of fridge or you should buy a fridge with more efficient power usage ")
     };
 
     document.getElementById("wmday").innerHTML = wmday/1000;
@@ -141,7 +141,7 @@ function Calculate(){
     totalUsage += (wmday/1000)*30;
 
     if (wmday > wmMaxPower) {
-        suggestions.push("You should Decrease the Usage Washing Machine or you should buy a washing Machine with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of Washing Machine or you should buy a washing Machine with more efficient power usage ")
     };
 
     document.getElementById("geyserday").innerHTML = geyserday/1000;
@@ -225,13 +225,12 @@ function Calculate(){
     if (suggestions.length == 0) {
         document.getElementById("sgst").innerHTML = "You dont need any suggestions, you are using electricity wisely! ⚡"
     } else {
-        document.getElementById("sgst").innerHTML = suggestions.join("<br>");
+        document.getElementById("sgst").innerHTML = suggestions.join("<br>") + "</p> Rest is well 😊</p>";
     }
 
     //Now begins the code for calculating total expenses and usage.... 
     document.getElementById("ttlpwr").innerHTML = "Total electricity usage (in kilowatt) : " + totalUsage;
     document.getElementById("emCost").innerHTML = "Estimated bill amount : " + totalUsage * elRate;
-    // document.getElementById("sgst").innerHTML = suggestions.join("<br>")
     
     if (elRate == 0) {
         alert("Please enter the Price of electricity")
@@ -253,13 +252,11 @@ function Calculate(){
             options: {
               title: {
                 display: true,
-                text: "Graphical representation of your Electricity usage per appliance"
+                text: "Graphical representation of your Electricity usage per appliance 📊"
               }
             }
           });
          document.getElementById("scr").style.display = "block";
 
     }
-// console.log("Made by Vinayak Handa (github.com/vinayakhanda)")
-// //Made by Vinayak Handa (github.com/vinayakhanda)
 
