@@ -231,7 +231,6 @@ function Calculate(){
     //Now begins the code for calculating total expenses and usage.... 
     document.getElementById("ttlpwr").innerHTML = "Total electricity usage (in kilowatt) : " + totalUsage;
     document.getElementById("emCost").innerHTML = "Estimated bill amount : " + totalUsage * elRate;
-    // document.getElementById("sgst").innerHTML = suggestions.join("<br>")
     
     if (elRate == 0) {
         alert("Please enter the Price of electricity")
@@ -260,6 +259,4 @@ function Calculate(){
          document.getElementById("scr").style.display = "block";
 
     }
-// console.log("Made by Vinayak Handa (github.com/vinayakhanda)")
-// //Made by Vinayak Handa (github.com/vinayakhanda)
 
