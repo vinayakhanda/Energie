@@ -111,7 +111,7 @@ function Calculate(){
     totalUsage += (acday/1000)*30;
 
     if (acday > acMaxPower) {
-        suggestions.push("You should Decrease the Usage A/c or you should buy an Ac with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of A/c or you should buy an Ac with more efficient power usage ")
     };
 
     document.getElementById("tvday").innerHTML = tvday/1000;
@@ -121,7 +121,7 @@ function Calculate(){
     totalUsage += (tvday/1000)*30;
 
     if (tvday > tvMaxPower) {
-        suggestions.push("You should Decrease the Usage TV or you should buy a Tv with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of TV or you should buy a Tv with more efficient power usage ")
     };
 
     document.getElementById("fridgeday").innerHTML = fridgeday/1000;
@@ -131,7 +131,7 @@ function Calculate(){
     totalUsage += (fridgeday/1000)*30;
 
     if (fridgeday > fridgeMaxPower) {
-        suggestions.push("You should Decrease the Usage fridge or you should buy a fridge with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of fridge or you should buy a fridge with more efficient power usage ")
     };
 
     document.getElementById("wmday").innerHTML = wmday/1000;
@@ -141,7 +141,7 @@ function Calculate(){
     totalUsage += (wmday/1000)*30;
 
     if (wmday > wmMaxPower) {
-        suggestions.push("You should Decrease the Usage Washing Machine or you should buy a washing Machine with more efficient power usage ")
+        suggestions.push("You should Decrease the Usage of Washing Machine or you should buy a washing Machine with more efficient power usage ")
     };
 
     document.getElementById("geyserday").innerHTML = geyserday/1000;
