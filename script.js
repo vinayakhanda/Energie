@@ -1,11 +1,11 @@
-var suggestions = [];
-
 function Calculate(){
+    var suggestions = [];
+
         //appliance[ac]
     var acNo = document.getElementById("ac").value;
     var acHour = document.getElementById("acHour").value;
-    var acPower = 1500;
-    var acMaxPower = 23000;
+    var acPower = 1700;
+    var acMaxPower = 25000;
     var totalAcHour = acNo * acPower;
     var acday = totalAcHour * acHour;
     var acMonth = acday * 30/1000;
@@ -225,7 +225,7 @@ function Calculate(){
     if (suggestions.length == 0) {
         document.getElementById("sgst").innerHTML = "You dont need any suggestions, you are using electricity wisely! ⚡"
     } else {
-        document.getElementById("sgst").innerHTML = suggestions.join("<br>") + "</p> Rest is well </p>";
+        document.getElementById("sgst").innerHTML = suggestions.join("<br>") + "</p> Rest is well 😊</p>";
     }
 
     //Now begins the code for calculating total expenses and usage.... 
@@ -252,7 +252,7 @@ function Calculate(){
             options: {
               title: {
                 display: true,
-                text: "Graphical representation of your Electricity usage per appliance"
+                text: "Graphical representation of your Electricity usage per appliance 📊"
               }
             }
           });
