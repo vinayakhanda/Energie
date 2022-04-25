@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function Calculate(){
     var suggestions = [];
 
@@ -524,4 +523,3 @@ function Calculate(){
 
     }
 
->>>>>>> 9428845fbe2eb5a1fd2053bce7dd2c9a9b4fb3d4
